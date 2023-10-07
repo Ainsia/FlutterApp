@@ -18,20 +18,44 @@ class Home extends StatelessWidget{
           child: Text("My First Flutter Application"),),
         backgroundColor: Colors.deepPurple[300],
       ),
-      //********* Adding Container **********
-      body:  Container(
-        // padding: EdgeInsets.fromLTRB(70.0,10.0,70.0,10.0),
-        // padding: EdgeInsets.symmetric(horizontal: 20.0,vertical: 40.0,),
-        // padding: EdgeInsets.all(90.0),
-        // margin: EdgeInsets.all(10.0),
-        // margin: EdgeInsets.symmetric(horizontal: 10.0,vertical: 30.0),
-        margin: EdgeInsets.fromLTRB(10.0, 50.0, 10.0, 50.0),
-        child:Text("Hello World",
-                  style: GoogleFonts.getFont('Pacifico', color: Colors.deepPurple,fontSize: 40,),
-        ),
 
-        color:Colors.blueGrey,
+
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text("Hello World",
+            style: GoogleFonts.getFont('Pacifico', color: Colors.deepPurple,fontSize: 20,),
+          )
+          ,
+          Icon(Icons.facebook, color: Colors.lightBlue,),
+
+          ElevatedButton(
+              onPressed: (){},
+              child: Text('Click Me',style: TextStyle(color:Colors.amberAccent,),),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueGrey,
+              ),
+          )
+        ],
       ),
+
+
+
+      //********* Adding Container **********
+      // body:  Container(
+      //   // padding: EdgeInsets.fromLTRB(70.0,10.0,70.0,10.0),
+      //   // padding: EdgeInsets.symmetric(horizontal: 20.0,vertical: 40.0,),
+      //   // padding: EdgeInsets.all(90.0),
+      //   // margin: EdgeInsets.all(10.0),
+      //   // margin: EdgeInsets.symmetric(horizontal: 10.0,vertical: 30.0),
+      //   margin: EdgeInsets.fromLTRB(10.0, 50.0, 10.0, 50.0),
+      //   child:Text("Hello World",
+      //             style: GoogleFonts.getFont('Pacifico', color: Colors.deepPurple,fontSize: 40,),
+      //   ),
+      //
+      //   color:Colors.blueGrey,
+      // ),
       // ******* Adding Padding **********
       // body: Padding(
       //   padding: EdgeInsets.all(40.0),
