@@ -19,26 +19,68 @@ class Home extends StatelessWidget{
         backgroundColor: Colors.deepPurple[300],
       ),
 
-
-      body: Row(
+      //******* Adding Columns *******
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text("Hello World",
-            style: GoogleFonts.getFont('Pacifico', color: Colors.deepPurple,fontSize: 20,),
-          )
-          ,
-          Icon(Icons.facebook, color: Colors.lightBlue,),
+          // ******* Adding Rows Inside a Column
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text("Hello", style: GoogleFonts.getFont("Bitter",fontSize: 20.0, color: Colors.orange[900]),),
+              Icon(Icons.mail, color: Colors.purple,),
+              Icon(Icons.airplane_ticket_rounded, color: Colors.cyanAccent,),
 
-          ElevatedButton(
-              onPressed: (){},
-              child: Text('Click Me',style: TextStyle(color:Colors.amberAccent,),),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blueGrey,
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              // ***** Adding Columns Inside the Row
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container( child: Text("Container"), color: Colors.pink,),
+                  Container( child: Text("Container"), color: Colors.purple,),
+                ],
               ),
+              ElevatedButton(onPressed: (){}, child: Text("Button")),
+              Container( child: Text("Container"), color: Colors.amberAccent,),
+            ],
+          ),
+          Container(
+            padding: EdgeInsets.all(30.0),
+            color: Colors.blue[200],
+            child: Text("Hello", style: GoogleFonts.getFont("Raleway",fontSize: 20.0),),
           )
         ],
       ),
+
+
+      //******** Adding Rows ************
+      // body: Row(
+      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //   crossAxisAlignment: CrossAxisAlignment.center,
+      //   children: [
+      //     Text("Hello World",
+      //       style: GoogleFonts.getFont('Pacifico', color: Colors.deepPurple,fontSize: 20,),
+      //     )
+      //     ,
+      //     Icon(Icons.facebook, color: Colors.lightBlue,),
+      //
+      //     ElevatedButton(
+      //         onPressed: (){},
+      //         child: Text('Click Me',style: TextStyle(color:Colors.amberAccent,),),
+      //         style: ElevatedButton.styleFrom(
+      //           backgroundColor: Colors.blueGrey,
+      //         ),
+      //     )
+      //   ],
+      // ),
 
 
 
