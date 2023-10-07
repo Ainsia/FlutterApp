@@ -18,8 +18,32 @@ class Home extends StatelessWidget{
           child: Text("My First Flutter Application"),),
         backgroundColor: Colors.deepPurple[300],
       ),
+      //********* Adding Container **********
+      body:  Container(
+        // padding: EdgeInsets.fromLTRB(70.0,10.0,70.0,10.0),
+        // padding: EdgeInsets.symmetric(horizontal: 20.0,vertical: 40.0,),
+        // padding: EdgeInsets.all(90.0),
+        // margin: EdgeInsets.all(10.0),
+        // margin: EdgeInsets.symmetric(horizontal: 10.0,vertical: 30.0),
+        margin: EdgeInsets.fromLTRB(10.0, 50.0, 10.0, 50.0),
+        child:Text("Hello World",
+                  style: GoogleFonts.getFont('Pacifico', color: Colors.deepPurple,fontSize: 40,),
+        ),
 
-      body: Center (
+        color:Colors.blueGrey,
+      ),
+      // ******* Adding Padding **********
+      // body: Padding(
+      //   padding: EdgeInsets.all(40.0),
+      //   child: Icon(
+      //     Icons.mail,
+      //     color: Colors.red,
+      //   ),
+      //
+      // ),
+
+
+      // body: Center (
         //******** Adding Text ********
         // child: Text("Hello World",
         //   style:GoogleFonts.getFont('Pacifico',
@@ -57,15 +81,16 @@ class Home extends StatelessWidget{
         // ),
 
       //   ********** Icon As Button ********
-        child: IconButton(
-          onPressed: (){},
-          icon: Icon(
-            Icons.mail,
-          ),
-          color: Colors.lightBlueAccent,
-          iconSize: 50.0 ,
-        ),
-      ),
+      //   child: IconButton(
+      //     onPressed: (){},
+      //     icon: Icon(
+      //       Icons.mail,
+      //     ),
+      //     color: Colors.lightBlueAccent,
+      //     iconSize: 50.0 ,
+      //   ),
+
+      // ),
       floatingActionButton: FloatingActionButton(
         // onPressed: null,
         onPressed: (){
