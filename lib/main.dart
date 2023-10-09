@@ -19,46 +19,82 @@ class Home extends StatelessWidget{
         backgroundColor: Colors.deepPurple[300],
       ),
 
-      //******* Adding Columns *******
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          // ******* Adding Rows Inside a Column
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text("Hello", style: GoogleFonts.getFont("Bitter",fontSize: 20.0, color: Colors.orange[900]),),
-              Icon(Icons.mail, color: Colors.purple,),
-              Icon(Icons.airplane_ticket_rounded, color: Colors.cyanAccent,),
 
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              // ***** Adding Columns Inside the Row
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container( child: Text("Container"), color: Colors.pink,),
-                  Container( child: Text("Container"), color: Colors.purple,),
-                ],
-              ),
-              ElevatedButton(onPressed: (){}, child: Text("Button")),
-              Container( child: Text("Container"), color: Colors.amberAccent,),
-            ],
+
+      // ************ Adding multiple images to body ************
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          Container(
+            child: Image(
+              image: AssetImage("image/image1.jpg"),
+              fit: BoxFit.contain,
+            ),
+            width: 150.0,
+            height: 160.0,
           ),
           Container(
-            padding: EdgeInsets.all(30.0),
-            color: Colors.blue[200],
-            child: Text("Hello", style: GoogleFonts.getFont("Raleway",fontSize: 20.0),),
-          )
+            child: Image(
+              image: AssetImage("image/image2.jpg"),
+              fit: BoxFit.contain,
+            ),
+            width: 150.0,
+            height: 160.0,
+          ),
+          Container(
+            child: Image(
+              image: AssetImage("image/image3.jpg"),
+              fit: BoxFit.contain,
+            ),
+            width: 150.0,
+            height: 160.0,
+          ),
         ],
       ),
+
+
+
+      // ******* Adding Columns *******
+      // body: Column(
+      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //   crossAxisAlignment: CrossAxisAlignment.center,
+      //   children: [
+      //     // ******* Adding Rows Inside a Column
+      //     Row(
+      //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //       crossAxisAlignment: CrossAxisAlignment.center,
+      //       children: [
+      //         Text("Hello", style: GoogleFonts.getFont("Bitter",fontSize: 20.0, color: Colors.orange[900]),),
+      //         Icon(Icons.mail, color: Colors.purple,),
+      //         Icon(Icons.airplane_ticket_rounded, color: Colors.cyanAccent,),
+      //
+      //       ],
+      //     ),
+      //     Row(
+      //       mainAxisAlignment: MainAxisAlignment.end,
+      //       crossAxisAlignment: CrossAxisAlignment.center,
+      //       children: [
+      //         // ***** Adding Columns Inside the Row
+      //         Column(
+      //           mainAxisAlignment: MainAxisAlignment.start,
+      //           crossAxisAlignment: CrossAxisAlignment.start,
+      //           children: [
+      //             Container( child: Text("Container"), color: Colors.pink,),
+      //             Container( child: Text("Container"), color: Colors.purple,),
+      //           ],
+      //         ),
+      //         ElevatedButton(onPressed: (){}, child: Text("Button")),
+      //         Container( child: Text("Container"), color: Colors.amberAccent,),
+      //       ],
+      //     ),
+      //     Container(
+      //       padding: EdgeInsets.all(30.0),
+      //       color: Colors.blue[200],
+      //       child: Text("Hello", style: GoogleFonts.getFont("Raleway",fontSize: 20.0),),
+      //     )
+      //   ],
+      // ),
 
 
       //******** Adding Rows ************
