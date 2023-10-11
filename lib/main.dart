@@ -4,12 +4,12 @@ import 'package:google_fonts/google_fonts.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MaterialApp(
-    home: Home(),
+    home: MyApp(),
 
   ),);
 }
 
-class Home extends StatelessWidget{
+class MyApp extends StatelessWidget{
   @override
   Widget build (BuildContext context){
     return Scaffold(
@@ -19,39 +19,70 @@ class Home extends StatelessWidget{
         backgroundColor: Colors.deepPurple[300],
       ),
 
+      // ******** Adding Expanded Widgets ********
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Row(
+            children: [
+              Expanded(child: Image.asset('image/image1.jpg'),),
+              Expanded(child: Image.asset('image/image1.jpg'),),
+              Expanded(child: Image.asset('image/image1.jpg'),),
+            ],
+          ),
+          Row(
+            children: [
+              Expanded(child: Image.asset('image/image2.jpg'),),
+              Expanded(child: Image.asset('image/image2.jpg'),),
+              Expanded(child: Image.asset('image/image2.jpg'),),
+            ],
+          ),
+          Row(
+            children: [
+              Expanded(child: Image.asset('image/image3.jpg'),),
+              Expanded(child: Image.asset('image/image3.jpg'),),
+              Expanded(child: Image.asset('image/image3.jpg'),),
+            ],
+          ),
+
+
+        ],
+
+      ),
+
 
 
       // ************ Adding multiple images to body ************
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          Container(
-            child: Image(
-              image: AssetImage("image/image1.jpg"),
-              fit: BoxFit.contain,
-            ),
-            width: 150.0,
-            height: 160.0,
-          ),
-          Container(
-            child: Image(
-              image: AssetImage("image/image2.jpg"),
-              fit: BoxFit.contain,
-            ),
-            width: 150.0,
-            height: 160.0,
-          ),
-          Container(
-            child: Image(
-              image: AssetImage("image/image3.jpg"),
-              fit: BoxFit.contain,
-            ),
-            width: 150.0,
-            height: 160.0,
-          ),
-        ],
-      ),
+      // body: Column(
+      //   mainAxisAlignment: MainAxisAlignment.center,
+      //   crossAxisAlignment: CrossAxisAlignment.end,
+      //   children: [
+      //     Container(
+      //       child: Image(
+      //         image: AssetImage("image/image1.jpg"),
+      //         fit: BoxFit.contain,
+      //       ),
+      //       width: 150.0,
+      //       height: 160.0,
+      //     ),
+      //     Container(
+      //       child: Image(
+      //         image: AssetImage("image/image3.jpg"),
+      //         fit: BoxFit.contain,
+      //       ),
+      //       width: 150.0,
+      //       height: 160.0,
+      //     ),
+      //     Container(
+      //       child: Image(
+      //         image: AssetImage("image/image3.jpg"),
+      //         fit: BoxFit.contain,
+      //       ),
+      //       width: 150.0,
+      //       height: 160.0,
+      //     ),
+      //   ],
+      // ),
 
 
 
